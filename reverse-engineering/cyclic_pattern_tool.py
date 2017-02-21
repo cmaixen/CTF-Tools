@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 # Source: https://github.com/realbadbytes/cyclic
 # cyclic pattern tool for buffer overflows
 # --gen : makes it possible to generate strings of a certain length, following a cyclic pattern
