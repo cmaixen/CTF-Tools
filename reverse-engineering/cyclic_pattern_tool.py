@@ -16,15 +16,15 @@ def main():
     if len(sys.argv) < 3:
         usage()
     elif sys.argv[1] == "--gen":
-        print "[+] pattern --> %s \n" % gen(int(sys.argv[2]))
+        print("[+] pattern --> %s \n" % gen(int(sys.argv[2])))
     elif sys.argv[1] == '--lookup':
-        print "[+] offset --> %d\n" % int(lookup(sys.argv[2]))
+        print("[+] offset --> %d\n" % int(lookup(sys.argv[2])))
     else:
         usage()
 
 def gen(length):
     pattern = ''
-    print "[+] generating pattern of length %d" % length
+    print("[+] generating pattern of length %d" % length)
     for x in xrange(len(alpha_upper)):
         for y in xrange(len(alpha_lower)):
             for z in xrange(100):
@@ -35,13 +35,13 @@ def gen(length):
     return pattern
 
 def lookup(search_string):
-    print "[+] looking up %s" % search_string
+    print("[+] looking up %s" % search_string)
     pattern = gen(50000)
     return pattern.find(search_string)
 
 def usage():
-    print "[+] Usage:"
-    print "[+] python cyclic.py [--gen OR --lookup] [numchars]\n"
+    print("[+] Usage:")
+    print("[+] python cyclic.py [--gen OR --lookup] [numchars]\n")
     raise SystemExit
 
 if __name__ == "__main__":
