@@ -14,7 +14,7 @@
 > **WARNING: do NOT use automated tools like wapiti or nikto**
 
 
-![screenshot](./screenshot.png)
+![screenshot](https://github.com/UrLab/ctf-writeups/raw/master/2017/qualifiers/web/skyblog/screenshot.png)
 
 ## Solution
 
