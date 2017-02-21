@@ -4,7 +4,7 @@
 # --gen : makes it possible to generate strings of a certain length, following a cyclic pattern
 # --lookup : do a lookup in this cyclic pattern
 import sys
-
+import os
 alpha_upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", \
         "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"] 
 
