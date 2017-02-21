@@ -12,6 +12,14 @@ alpha_lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", \
         "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 def main():
+    if sys.version > '3':
+          python2 = os.popen('which python2 2> /dev/null').read().rstrip()
+          if python2:
+            args = sys.argv[:]
+            args.insert(0,python2)
+            os.execv(python2,args)
+          else:
+            sys.exit("%s requires Python Version 2 (python2 not in PATH)" % os.path.basename(__file__))
     print("\n[+] badbytes.io cyclic pattern gen/lookup tool")
     if len(sys.argv) < 3:
         usage()
