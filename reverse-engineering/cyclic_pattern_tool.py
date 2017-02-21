@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # Source: https://github.com/realbadbytes/cyclic
 # cyclic pattern tool for buffer overflows
-# makes it possible to generate strings of a certain length
-# also do a lookup
+# --gen : makes it possible to generate strings of a certain length, following a cyclic pattern
+# --lookup : do a lookup in this cyclic pattern
 import sys
 
 alpha_upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", \
