@@ -12,7 +12,7 @@ alpha_lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", \
         "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 def main():
-    print "\n[+] badbytes.io cyclic pattern gen/lookup tool"
+    print("\n[+] badbytes.io cyclic pattern gen/lookup tool")
     if len(sys.argv) < 3:
         usage()
     elif sys.argv[1] == "--gen":
