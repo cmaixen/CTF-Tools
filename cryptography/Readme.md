@@ -8,3 +8,8 @@
 
 ## Techniques
 * [Crib Dragging](http://samwho.co.uk/blog/2015/07/18/toying-with-cryptography-crib-dragging)
+* [RSAtool](https://github.com/ius/rsatool): Generate Private key when P and Q is known.
+
+##Lookup Tables
+### RSA
+* [Factordb](http://www.factordb.com/index.php): Look up the factor values p and q for a certain n. Handy for RSA with low primenumbers.
