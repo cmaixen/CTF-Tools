@@ -2,7 +2,7 @@
 
 My Personal Library for CTF's
 
-###  List of tools that can come handy during the ctf!
+##  List of tools that can come handy during the ctf!
 
 [Source](https://ctf.oddcoder.com/toolset "Permalink to AlexCTF")
 
@@ -65,4 +65,6 @@ My Personal Library for CTF's
 [22]: https://slack.com
 [23]: https://www.virtualbox.org/
 
-  
+
+##  Informative Write-ups
+* [Pico2014 CTF](https://ehsandev.com/pico2014/index.html): Well documented write-ups, going from easy to advanced
