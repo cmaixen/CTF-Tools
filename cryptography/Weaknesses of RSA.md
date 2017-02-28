@@ -15,7 +15,8 @@ Given that the underlying mathematics is the same for encryption and signing, on
 
 ## Using a common modulus for different users
 Do not use the same modulus n with different (ei, di) pairs for different users in a group. Given his own pair (e1, d1), user 1 can factorize the common n into p and q and hence compute the private exponents di of all the other users. 
-* [how to factorize N given d](http://www.di-mgt.com.au/rsa_factorize_n.html)
+* [How to factorize N given d](http://www.di-mgt.com.au/rsa_factorize_n.html): Explains in pseudo-code how to quikly factorize N when d and e are known.
+
 ## Acting as an oracle
 There are techniques to recover the plaintext if a user just blindly returns the RSA transformation of the input. So don't do that. 
 
