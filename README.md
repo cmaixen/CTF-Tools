@@ -68,3 +68,6 @@ My Personal Library for CTF's
 
 ##  Informative Write-ups
 * [Pico2014 CTF](https://ehsandev.com/pico2014/index.html): Well documented write-ups, going from easy to advanced
+
+## Other Awesome CTF LISTS
+* [awesome ctf](https://github.com/apsdehal/awesome-ctf): Very well curated CTF list with tools, write-ups, exercises, tutorials...
