@@ -2,7 +2,8 @@
 
 ## Theoretical Documentation
 * [Crypto101](https://www.crypto101.io/): All basic cryptotechniques comprehensivly explained
-* [How RSA Works With Examples](http://doctrina.org/How-RSA-Works-With-Examples.html): Comprehensive explanation on how RSA works. 
+* [How RSA Works With Examples](http://doctrina.org/How-RSA-Works-With-Examples.html): Comprehensive explanation on how RSA works.
+* [RSA: the theory and practicality]: Very good site with a theoretical and practical explanation on RSA.
 
 ## Decoding/Encoding
 * [Cryptii](https://cryptii.com): Decode and encode in multiple formats at the same time
