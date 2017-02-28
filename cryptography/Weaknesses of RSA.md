@@ -20,8 +20,8 @@ Do not use the same modulus n with different (ei, di) pairs for different users 
 There are techniques to recover the plaintext if a user just blindly returns the RSA transformation of the input. So don't do that. 
 
 ## Also
-* [RSA with small prime](../RSA with small prime.md): This can be looked up or even calculated.
-* [Weak RSA-keys](http://pentestmonkey.net/blog/metasploit-ssh-key-database)
+* [RSA with small prime](RSA with small prime.md): This can be looked up or even calculated.
+* [Weak RSA-keys](http://pentestmonkey.net/blog/metasploit-ssh-key-database): Weak SSH Keys for Debian OpenSSL Vulnerability
 # Solutions
 
 1. Don't use the same RSA key for encryption and signing.
