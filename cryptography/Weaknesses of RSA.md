@@ -5,7 +5,7 @@ All possible weaknesses of RSA.
 
 ## Small encryption exponent
 If you use a small exponent like `e=3` **_and_** send the same message to different recipients **_and_** just use the RSA algorithm without adding random padding to the message, then an eavesdropper could recover the plaintext. 
-=> Theorie: [Cracking RSA](http://www.di-mgt.com.au/crt.html#crackingrsa)
+* Theorie: [Cracking RSA](http://www.di-mgt.com.au/crt.html#crackingrsa)
 
 ## Small encryption exponent and small message
 If you use `e=3` and just encrypt a small message m without padding where `m3 < n` then your ciphertext c can easily be broken by simply computing its real cube root. For example, if we have the public key `(n, e) = (25777, 3)` and just encrypt the small message `m = 10` then the ciphertext is `c = 1000`. The secure properties of RSA encryption only work if `me > n`. 
@@ -15,7 +15,7 @@ Given that the underlying mathematics is the same for encryption and signing, on
 
 ## Using a common modulus for different users
 Do not use the same modulus n with different (ei, di) pairs for different users in a group. Given his own pair (e1, d1), user 1 can factorize the common n into p and q and hence compute the private exponents di of all the other users. 
-=> [how to factorize N given d](http://www.di-mgt.com.au/rsa_factorize_n.html)
+* [how to factorize N given d](http://www.di-mgt.com.au/rsa_factorize_n.html)
 ## Acting as an oracle
 There are techniques to recover the plaintext if a user just blindly returns the RSA transformation of the input. So don't do that. 
 
