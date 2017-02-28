@@ -1,8 +1,8 @@
 #Useful Links
+## Tools
 * [Foremost](http://tools.kali.org/forensics/foremost): recover lost files based on their headers, footers, and internal data structures.
 * [Scalpel](https://github.com/sleuthkit/scalpel): Scalpel is a file carving and indexing application that runs on Linux
 and Windows. More versatile than Foremost. You can change de headers and footers of the files you are looking for. 
-* [PGP Encryption/Decryption](https://sela.io/pgp/): Online PGP Encryption/Decryption Tool
 * [oletools](http://www.decalage.info/python/oletools) is a package of python tools to analyze
 [Microsoft OLE2 files](http://en.wikipedia.org/wiki/Compound_File_Binary_Format) 
 (also called Structured Storage, Compound File Binary Format or Compound Document File Format), 
@@ -22,3 +22,9 @@ It is based on the [olefile](http://www.decalage.info/olefile) parser.
     which is especially useful for malware analysis.
   - [oleobj](https://github.com/decalage2/oletools/wiki/oleobj): to extract embedded objects from OLE files.
   - [rtfobj](https://github.com/decalage2/oletools/wiki/rtfobj): to extract embedded objects from RTF files.
+
+
+#Websites
+
+* [PGP Encryption/Decryption](https://sela.io/pgp/): Online PGP Encryption/Decryption Tool
+* [File Signature Database](https://www.filesignatures.net/index.php?page=search): Lookup a specific file signature.
