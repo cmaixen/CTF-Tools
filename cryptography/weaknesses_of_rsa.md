@@ -1,4 +1,7 @@
+[Source](http://www.di-mgt.com.au/rsa_alg.html)
 # Weaknesses in RSA
+
+All possible weaknesses of RSA.
 
 ## Small encryption exponent
 If you use a small exponent like `e=3` **_and_** send the same message to different recipients **_and_** just use the RSA algorithm without adding random padding to the message, then an eavesdropper could recover the plaintext. 
