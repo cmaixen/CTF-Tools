@@ -1,0 +1,232 @@
+This patch was created to show the differences between the
+generic gzip 1.2.4 distribution and the gzip-steg-1.2.4
+distribution downloadable here.
+
+This file includes:
+
+* Andrew Brown's original 1994 patches against gzip 1.2.4
+* Ken Pizzini's one-line patch to fix a filedescriptor
+  bug introduced by Andrew.
+
+To use this patch:
+
+	(download gzip sources from www.gzip.org)
+	tar -xvf gzip-1.2.4.tar
+	patch -p0 < gzip-steg-1.2.4.patch
+	(build as per usual for your platform)
+
+Patch maintained by: web [at] wiretapped.net
+
+--- gzip-1.2.4-orig/deflate.c	Fri Aug 13 22:35:31 1993
++++ gzip-1.2.4/deflate.c	Sun May  1 05:13:48 1994
+@@ -71,6 +71,31 @@
+ static char rcsid[] = "$Id: deflate.c,v 0.15 1993/06/24 10:53:53 jloup Exp $";
+ #endif
+ 
++/* gzsteg: our declarations */
++
++extern int steg;			/* steganography flag */
++extern int sfd;				/* file descriptor */
++extern int stegidx;			/* 0-7: next bitpos 8-39: length bit */
++extern ulg steglength;			/* file length (bytes) */
++extern ulg stegbits;			/* file length (bits) */
++extern uch stegbyte;			/* next byte */
++
++local int steg_rbit()
++{
++  ush retval;
++
++  if(stegidx>=8) {			/* 39..8 = length */
++    stegidx--;
++    return ((steglength & (1L<<(stegidx-7L)))!=0);
++  }
++  if(stegidx==7)
++    read(sfd,&stegbyte,1);
++  retval = ((stegbyte & (1L<<stegidx))!=0);
++  if(!stegidx--)
++    stegidx=7;
++  return retval;
++}
++
+ /* ===========================================================================
+  * Configuration parameters
+  */
+@@ -705,6 +730,23 @@
+          * match is not better, output the previous match:
+          */
+         if (prev_length >= MIN_MATCH && match_length <= prev_length) {
++/*
++ * gzsteg: now we know that match_length is long enough for our needs we
++ *         make room for our bit, then hide it.
++ */
++
++	  if(steg && stegbits) {
++	    if(prev_length>MIN_MATCH+1) {
++	      prev_length--;
++	      if(steg_rbit())
++		prev_length|=1;
++	      else
++		prev_length&=(~1);
++	      stegbits--;
++	    }
++	    else if(prev_length==MIN_MATCH+1)
++	      prev_length--;
++	  }
+ 
+             check_match(strstart-1, prev_match, prev_length);
+ 
+--- gzip-1.2.4-orig/inflate.c	Sat Aug 14 00:50:20 1993
++++ gzip-1.2.4/inflate.c	Sun May  1 05:14:06 1994
+@@ -111,6 +111,35 @@
+ #include "gzip.h"
+ #define slide window
+ 
++/* gzsteg: our declarations */
++
++extern int steg;			/* steganography flag */
++extern int sfd;				/* file descriptor */
++extern int stegidx;			/* bits in 0..7 or 8..39 */
++extern ulg steglength;			/* file length (bytes) */
++extern ulg stegbits;			/* file length (bits) */
++extern uch stegbyte;			/* next byte */
++local void steg_wbit OF((int b));
++
++local void steg_wbit(b)			/* write bit */
++     int b;
++{
++  if(stegidx>=8 && stegidx<=39)	{	/* 39..8 = length */
++    if(b) steglength|=(1L<<(stegidx-8L));
++    if(stegidx==8)
++      stegbits=steglength*8;
++    stegidx--;
++    return;
++  }
++  if(b) stegbyte|=(1<<stegidx);
++  if(!stegidx-- && stegbits) {
++    write(sfd,&stegbyte,1);
++    stegbits-=8;
++    stegbyte=0;
++    stegidx=7;
++  }
++}
++
+ /* Huffman code lookup table entry--this entry is four bytes for machines
+    that have 16-bit pointers (e.g. PC's in the small or medium model).
+    Valid extra bits are 0..13.  e == 15 is EOB (end of block), e == 16
+@@ -558,6 +587,13 @@
+       d = w - t->v.n - ((unsigned)b & mask_bits[e]);
+       DUMPBITS(e)
+       Tracevv((stderr,"\\[%d,%d]", w-d, n));
++
++/*
++ * gzsteg: bit 0 of n is ours, so long as n>3 (MIN_MATCH)
++ */
++
++      if(n>3 && steg)
++	steg_wbit(n&1);
+ 
+       /* do the copy */
+       do {
+--- gzip-1.2.4-orig/gzip.c	Thu Aug 19 23:39:43 1993
++++ gzip-1.2.4/gzip.c	Sun May  1 05:13:53 1994
+@@ -198,6 +198,17 @@
+ 
+ 		/* local variables */
+ 
++/* gzsteg: our variables */
++
++local struct stat stegstat;
++local char stegname[MAX_PATH_LEN];
++int steg=0;
++int sfd;
++int stegidx=39;
++ulg steglength=0L;
++ulg stegbits;
++uch stegbyte=0;
++
+ int ascii = 0;        /* convert end-of-lines to local OS conventions */
+ int to_stdout = 0;    /* output to stdout (-c) */
+ int decompress = 0;   /* decompress (-d) */
+@@ -259,6 +270,7 @@
+     {"quiet",      0, 0, 'q'}, /* quiet mode */
+     {"silent",     0, 0, 'q'}, /* quiet mode */
+     {"recursive",  0, 0, 'r'}, /* recurse through directories */
++    {"steg",       1, 0, 's'}, /* gzsteg: hide/reveal file */
+     {"suffix",     1, 0, 'S'}, /* use given suffix instead of .gz */
+     {"test",       0, 0, 't'}, /* test compressed file integrity */
+     {"no-time",    0, 0, 'T'}, /* don't save or restore the time stamp */
+@@ -347,6 +359,7 @@
+ #ifndef NO_DIR
+  " -r --recursive   operate recursively on directories",
+ #endif
++ " -s --steg        hide/reveal file in compressed data",
+  " -S .suf  --suffix .suf     use suffix .suf on compressed files",
+  " -t --test        test compressed file integrity",
+  " -v --verbose     verbose mode",
+@@ -478,7 +491,8 @@
+     strncpy(z_suffix, Z_SUFFIX, sizeof(z_suffix)-1);
+     z_len = strlen(z_suffix);
+ 
+-    while ((optc = getopt_long (argc, argv, "ab:cdfhH?lLmMnNqrS:tvVZ123456789",
++    while ((optc = getopt_long (argc, argv,
++				"ab:cdfhH?lLmMnNqrs:S:tvVZ123456789",
+ 				longopts, (int *)0)) != EOF) {
+ 	switch (optc) {
+         case 'a':
+@@ -523,6 +537,10 @@
+             z_len = strlen(optarg);
+             strcpy(z_suffix, optarg);
+             break;
++	case 's':			/* gzsteg: set steganography flag */
++	    steg = 1;
++	    strcpy(stegname,optarg);
++            break;
+ 	case 't':
+ 	    test = decompress = to_stdout = 1;
+ 	    break;
+@@ -558,6 +576,27 @@
+ 
+     file_count = argc - optind;
+ 
++/*
++ * gzsteg: open input/output file depending on steg flag
++ */
++
++    if(steg) {
++      if(decompress)
++	sfd=OPEN(stegname,O_WRONLY|O_CREAT|O_BINARY,RW_USER);
++      else {
++	sfd=OPEN(stegname,O_RDONLY|O_BINARY,RW_USER);
++	fstat(sfd,&stegstat);
++	steglength=stegstat.st_size;
++	stegbits=(steglength*8)+32;
++      }
++      if(sfd == -1) {
++	fprintf(stderr, "%s: ", progname);
++	perror(stegname);
++	exit_code = ERROR;
++	return;
++      }
++    }
++
+ #if O_BINARY
+ #else
+     if (ascii && !quiet) {
+@@ -598,6 +637,17 @@
+     if (list && !quiet && file_count > 1) {
+ 	do_list(-1, -1); /* print totals */
+     }
++
++/* gzsteg: close our file */
++
++    if(steg) {
++      if(!decompress && stegbits)
++	fprintf(stderr,"%s: %ld bytes too large to hide\n",
++		stegname,
++		stegbits/8);
++      close(sfd);
++    }
++
+     do_exit(exit_code);
+     return exit_code; /* just to avoid lint warning */
+ }

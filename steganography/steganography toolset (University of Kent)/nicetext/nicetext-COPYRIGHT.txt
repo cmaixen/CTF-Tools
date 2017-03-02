@@ -1,0 +1,67 @@
+NICETEXT 
+
+Copyright (c) 1995-1998 Dr. George Davida and Mark T. Chapman.  All rights reserved.
+
+This copyright applies to the software source code, software binaries, 
+and the software documentation that is not already copyright elsewhere.  
+
+This copyright does not apply to the word lists, sample texts, or 
+dictionary tables.  Sample texts and word lists have been downloaded from 
+several places on the Internet.  These are documented in the 
+doc/distribution.txt.   Furthermore, the copyright does not apply to the 
+results of the "nicetext" or "scramble" transformations.
+
+TERMS OF USE
+All commercial use is strictly prohibited without the written
+authorization from the copyright holders.
+
+Use by any government or agency or agent of any government other
+than the United States of America is strictly prohibited. Use by
+the Government of the United States, its agencies or agents is
+permitted for all lawfull purposes. 
+
+Permission is granted to any individual for personal or educational purposes
+to use, copy, or redistribute this software so long as all of the original
+files are included, that it is not sold for profit, and that this copyright
+notice is retained. 
+
+The NICETEXT software may be used and re-distributed for personal or
+educational use without charge, provided that the software origin and
+research team are cited in any use of the system.  "Personal use" excludes 
+use by corporations or government entities.  Contact the authors for
+institutional licensing.
+
+THE SOFTWARE IS PROVIDED "AS-IS". NO WARRANTIES OF ANY KIND, EXPRESS
+OR IMPLIED, ARE MADE AS TO IT OR ANY MEDIUM IT MAY BE ON. NO REMEDY IS
+PROVIDED BY THE AUTHOR FOR INDIRECT, CONSEQUENTIAL, PUNITIVE OR INCIDENTAL
+DAMAGES ARISING FROM IT, INCLUDING SUCH FROM NEGLIGENCE, STRICT LIABILITY,
+OR BREACH OF WARRANTY OR CONTRACT, EVEN AFTER NOTICE OF THE POSSIBILITY OF
+SUCH DAMAGES. THE AUTHOR ASSUMES NO LIABILITY WITH RESPECT TO THE INFRINGEMENT
+OF COPYRIGHTS, TRADE SECRETS, OR ANY PATENTS.  PROPER USE OF THE SOFTWARE
+IS ENTIRELY THE RESPONSIBILITY OF THE USER.
+
+DERIVATIVE WORKS
+
+Users may make derivative works from the NICETEXT software, subject
+to the following constraints:
+
+- You must include the above copyright notice and these
+  accompanying paragraphs in all forms of derivative works,
+  and any documentation and other materials related to such
+  distribution and acknowledge that the software was developed by
+  the original authors stated above.
+
+- You must notify the authors regarding your distribution of
+  the derivative work.
+
+- You must clearly notify users that your are distributing
+  a modified version and not the original NICETEXT software.
+
+- Corporations or Government entities are restricted from creating
+  derivative works without written consent from the author.
+
+- Any derivative product is also subject to these copyright
+  and use restrictions.
+
+The NICETEXT software is NOT in the public domain.  The authors retain 
+copyright, as specified above.

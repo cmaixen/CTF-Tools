@@ -1,0 +1,130 @@
+
+Camera/Shy is a pretty simple application, so there is not much to say about it
+once you have seen the demo. The technology is not new, the steganography. Everyone
+has seen a browser before. What is really new about Camera/Shy is the ability to
+do this whole process of finding and decrypting the images on the fly.
+
+Some people are afraid it will aid terrorists. Some people are afraid that the steg I
+use is not strong enough, though there is no steg downloadable from the web which can
+not be detected. 
+
+One of the biggest points, here, though... is that we are talking about censorship, we
+are admitting there is a problem. We are saying we can work towards a solution. We
+are acknowledging that the internet is an amazing force of freedom. We are looking
+at using the internet for this freedom.
+
+In the past, we used to have to smuggle banned books into Soviet Russia and the
+Eastern Bloc manually. We would hide books in microfiche. Today, we have the internet
+and the only thing stopping someone from finding out whatever they want to know
+is that censoring firewall at the ISP level.
+
+For me, while I have beliefs, while I have opinions... I understand one thing. Opinions
+which are true can handle opinions which are untrue. Beliefs which are firmly grounded
+in reason, can handle doubts against them. Truth is infinitely stronger than lies, though
+lies can appear so menacing. They are but wisps of smoke. Dreams made of nothing.
+
+This is why these countries censor their people. They censor their people to control
+their people. They control their people by lies, and if the truth be told, their control
+will collapse.
+
+As long as we have countries and organizations which control people by lies,
+injustice will exist. Wherever there is injustice in the courts, injustice in the powers
+that be, there is the slander which falsely accuses the innocent. Slander is a lie. Censorship
+is the defender of that slander.
+
+It was slander which had men thrown to the lions. It was slander which had men burned
+at the stake. It was slander which the Nazi's used to justify their outrages against the
+Jews. It was slander which sealed the fate of those doomed in Siberian jails.
+
+Camera/Shy is easy to use. You do not have to download the image, drag and drop
+it or use it from the commandline. You just double click the content it finds automatically.
+It is real world based, not theory based. 
+
+In the real world, sites are banned haphazardly at the ISP level. It is with genuine difficulty
+one can police this. It takes money, it takes manhours, it takes budgets made the year before.
+
+Current IDS systems do not implement steganalysis. It will be very costly to have them
+do so. And, if they ever do this, they will find themselves having two choices. 
+
+One, they can ban the site with the stegged image. Or, two, they can start tracking whomever
+downloads the stegged image.
+
+The trick in making this secure is to put up stegged images everywhere. To use the lie
+of the fake image correctly. There is no use in putting a stegged image on a dissident website.
+You put a stegged image where it will be downloading innocently by people in the know
+and people not in the know. 
+
+This way they can not stop the images from being downloaded even if they are able to
+find them.
+
+They can not ban them, either, because they don't know what they are banning. They could
+be banning something anti-Communist, anti-UAE... or they could banning something for
+themselves. They could be forced to ban whatever sites we wish them to ban if they did this. So,
+we could put these images up on American business sites, on European business sites, on
+pro-Communist sites. 
+
+Camera/Shy is not for idiots. By the common user we do not mean it is for idiots. If you
+are dealing with highly explosive material, you have to know the risks. You have to study
+what you are doing. For those putting up images, you have to put them in proper places -- you
+don't put up dissident stegged images on dissident sites.
+
+All that does is tell people that you have something really serious going on nobody wants
+to know about.
+
+You try and put it on a site with high traffic. If you are the only person visiting a site... then
+if it is found, you are the only suspect. If that site is found. Granted, many a lonely sites
+out there which are never found by anyone.
+
+This scares some people. They say, "Then there are risks and no one should use it". There
+are always risks. We are not some tin cup saviours here. The real heroes are those in
+the trenches, and nobody forget that. There are risks in these countries people in the free
+world never have to take or know about. 
+
+But, for most user's of Camera/Shy none of this will come into play. Their government doesn't
+really care about them, just like our government doesn't have in jail everyone whom smokes
+pot or attends KKK rallies where they preach about overthrowing the US. There is a lot of unrest, 
+a lot of distance between the government and the people.
+
+KKK. Terrorists. Now, about terrorism, which really detracts from the more important points...
+there are a number of things which I believe are really common sense here, and nobody should
+be asking this question. But, as I work in security and am well versed in the history of terrorism
+and organized crime... maybe it is not something they really ever even think about.
+
+The major point that screams out at me is the fact that I am one of two vulnerability
+researchers at a very famous security company. We have zero day in our possession all the time going
+through vendors or being further researched out.
+
+We know how easy it is to hack anyone or anything. We know how buggy even the most
+supposedly "secure" software is. 
+
+I do not believe we would have any qualms with working with the government in fighting 
+against these criminals. None. 
+
+And, while this may be a scary issue in and of itself, the fact remains, that surveillance
+is a part of life. The FBI can put bugs in people's homes. The CIA can bug diplomat's offices.
+They can watch wherever they go, and use helicopters to trail difficult to follow subjects.
+
+But, anyone whom has read about their surveillance trials with the Mafia or other organized
+crime groups... anyone whom has read about the cold war spy games... knows that it is a back
+and forth situation. Yes, you can sneak away and talk to someone in private. Yes, you can
+get sentences out in private, even with a twenty man surveillance team on you.
+
+On the internet, one trojan on a person's system, and they are toast. One properly coded
+trojan on an extremist's website, they are all toast. One special newspost, they are toast. One
+special email, they are toast. Yes, if small companies with little resources can find zero day
+exploits, the governments of the world surely can. Camera/Shy doesn't change any of this. 
+
+Lastly, but with Camera/Shy you do have a very easy means to browse private content. It
+is a technique for escaping the watchful censor's eyes. You can keep your website from
+being banned with Camera/Shy. You can quickly and easily provide whatever content you
+wish to people without prying eyes catching them. You can force these governments to have
+a genuine headache in trying to catch up. It is not fool-proof if you have a twelve man 
+surveillance team on you -- but it is pretty darned good if you are not a suspect and wish
+to remain as such.
+
+
+
+ 
+
+
+

@@ -1,0 +1,26 @@
+
+This software was tested using electronic texts and dictionaries from
+several locations on the Internet:
+
+********************
+Bob Baldwin's collections of words from MIT augmented by Matt Bishop and
+Daniel Klein at ftp://ftp.funet.fi/pub/doc/dictionaries/DanKlein
+
+********************
+Project Gutenberg at ftp://ftp.freebsd.org/pub/gutenberg/
+
+********************
+U.S. Federal Reserve Board at http://www.bog.frb.fed.us/BOARDDOCS/TESTIMONY/
+
+********************
+PC-KIMMO Evan L. Antworth. User's Guide to PC-KIMMO Version 2. Summer Institute
+of Linguistics, Inc., 1995. http://www.sil.org/pckimmo/v2/doc/guide.html.
+
+********************
+The Carnegie Mellon Pronouncing Dictionary:
+## The Carnegie Mellon Pronouncing Dictionary [cmudict.0.4] is Copyright 1995
+## by Carnegie Mellon University. Use of this dictionary, for any research or
+## commercial purpose, is completely unrestricted.  If you make use of or
+## redistribute this material, we would appreciate acknowlegement of its
+## origin.
+
