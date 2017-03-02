@@ -16,6 +16,7 @@
 - [Steghide](http://steghide.sourceforge.net/) - Hide data in various kind of images
 - [Stegsolve](http://www.caesum.com/handbook/Stegsolve.jar) - Apply various steganography techniques to images
 - [Zsteg](https://github.com/zed-0xff/zsteg): detect stegano-hidden data in PNG & BMP
+- [Outguess](http://uncovering-cicada.wikia.com/wiki/OutGuess): OutGuess is a universal steganographic tool that allows the insertion of hidden information into the redundant bits of data sources.
 
 # Tips
 
@@ -25,3 +26,5 @@
     $ file doge_stege.png
     doge_stege.png: PNG image data, 680 x 510, 8-bit colormap, non-interlaced
     ```
+# Extra Sources
+* [Big List with Stenography Software](http://www.jjtc.com/Steganography/tools.html): Big List with known and unknown Stenography software.
