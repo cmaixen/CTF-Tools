@@ -16,3 +16,12 @@
 - [Steghide](http://steghide.sourceforge.net/) - Hide data in various kind of images
 - [Stegsolve](http://www.caesum.com/handbook/Stegsolve.jar) - Apply various steganography techniques to images
 - [Zsteg](https://github.com/zed-0xff/zsteg): detect stegano-hidden data in PNG & BMP
+
+# Tips
+
+* **If you have a PNG, check if it is an 8-bit colormap.** An 8-bit colormap is a typical place where things are hidden in a steganography challenge.
+
+    ```bash
+    $ file doge_stege.png
+    doge_stege.png: PNG image data, 680 x 510, 8-bit colormap, non-interlaced
+    ```
