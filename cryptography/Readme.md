@@ -7,6 +7,7 @@
 
 ## Decoding/Encoding
 * [Cryptii](https://cryptii.com): Decode and encode in multiple formats at the same time
+* [Braille: A 6-bit binary language](http://tyleregeto.com/article/braille-6bit-binary-language): Decode and encode Braille to Binary and Ascii.
 
 ## Techniques
 * [Crib Dragging](http://samwho.co.uk/blog/2015/07/18/toying-with-cryptography-crib-dragging)
