@@ -1,3 +1,6 @@
+## Practical Knowledge
+* [File Carving](http://resources.infosecinstitute.com/file-carving/#gref): Nice article about several **File Carving tools** 
+
 #Useful Links
 ## Tools
 * [Foremost](http://tools.kali.org/forensics/foremost): recover lost files based on their headers, footers, and internal data structures.
