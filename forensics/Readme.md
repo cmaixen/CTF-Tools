@@ -5,7 +5,8 @@
 ## Tools
 * [Foremost](http://tools.kali.org/forensics/foremost): recover lost files based on their headers, footers, and internal data structures.
 * [Scalpel](https://github.com/sleuthkit/scalpel): Scalpel is a file carving and indexing application that runs on Linux
-and Windows. More versatile than Foremost. You can change de headers and footers of the files you are looking for. 
+and Windows. More versatile than Foremost. You can change de headers and footers of the files you are looking for.
+* [INDXParse](https://github.com/williballenthin/INDXParse.git): Tool suite for inspecting NTFS artifacts>
 * [oletools](http://www.decalage.info/python/oletools) is a package of python tools to analyze
 [Microsoft OLE2 files](http://en.wikipedia.org/wiki/Compound_File_Binary_Format) 
 (also called Structured Storage, Compound File Binary Format or Compound Document File Format), 
